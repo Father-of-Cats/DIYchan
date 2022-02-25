@@ -21,7 +21,7 @@ Comments.init(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    comment: {
+    comment_data: {
         type: DataTypes.TEXT,
         allowNull: false,
     },

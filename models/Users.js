@@ -6,7 +6,6 @@ class Users extends Model {}
 
 Users.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -24,6 +23,10 @@ Users.init(
     username: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     datecreated: {
         type: DataTypes.DATE,
