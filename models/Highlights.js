@@ -6,7 +6,6 @@ class Highlights extends Model {}
 
 Highlights.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
