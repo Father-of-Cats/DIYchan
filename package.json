@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/Father-of-Cats/DIYchan/issues"
   },
-  "homepage": "https://github.com/Father-of-Cats/DIYchan#readme"
+  "homepage": "https://github.com/Father-of-Cats/DIYchan#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "sequelize": "^6.16.3"
+  }
 }
