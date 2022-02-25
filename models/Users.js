@@ -17,20 +17,24 @@ Users.init(
       allowNull: false,
     },
     type: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'usertypes',
+        key: 'id'
+      },
     },
     username: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     datecreated: {
-        type: DataTypes.DATE,
-        defaultValue: Sequelize.NOW,
+      type: DataTypes.DATE,
+      defaultValue: Sequelize.NOW,
     },    
   },
   {

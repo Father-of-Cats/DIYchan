@@ -16,6 +16,14 @@ Usersettings.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'users',
+        key: 'id'
+      },
+    },
   },
   {
     sequelize,
