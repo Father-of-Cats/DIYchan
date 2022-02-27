@@ -24,6 +24,14 @@ Users.init(
         key: 'id'
       },
     },
+    Subs: {
+      type: DataTypes.ARRAY,
+      allowNull: false,
+      references: {
+        model: 'Subchans',
+        key: 'owner_id'
+      },
+    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,

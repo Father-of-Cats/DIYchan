@@ -6,43 +6,35 @@ const Comments = require('./Comments');
 const Posts = require('./Posts');
 const Highlights = require('./Highlights');
 
-Users.hasMany(Subchans, {
-    foreignKey: 'owner_id',
+Users.hasMany(Usertypes);
+
+Users.belongsToMany(Subchans, {
+  through: sub_id,
 });
 
-Users.hasMany(Posts, {
-    foreignKey: 'user_id',
+Users.belongsToMany(Posts, {
+  through: user_id,
 });
 
-Users.hasMany(Comments, {
-    foreignKey: 'user_id',
+Users.belongsToMany(Comments, {
+  through: user_id,
 });
 
-Posts.belongsTo(Subchans, {
-    foreignKey: 'id',
+Posts.belongsToMany(Subchans, {
+  through: sub_id,
 });
 
-Comments.belongsTo(Posts, {
-    foreignKey: 'id',
+Posts.belongsTo(Users);
+
+Comments.belongsToMany(Posts, {
+  through: post_id,
 });
 
-Product.belongsTo(Category, {
-  foreignKey: 'category_id'
-});
+Comments.belongsTo(Users);
 
-Category.hasMany(Product,{
-  foreignKey: 'category_id'
-});
+Subchans.belongsTo(Users);
 
-Product.belongsToMany(Tag, {
-  foreignKey: 'product_id',
-  through: ProductTag
-});
-
-Tag.belongsToMany(Product, {
-  foreignKey: 'tag_id',
-  through: ProductTag
-});
+Highlights.hasMany(Subchans);
 
 module.exports = {
   Users,
