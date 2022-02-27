@@ -6,7 +6,6 @@ class Comments extends Model {}
 
 Comments.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -16,14 +15,22 @@ Comments.init(
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'users',
+        key: 'id'
+      },
     },
-    sub_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+    post_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'subchans',
+        key: 'id'
+      },
     },
-    comment: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+    comment_data: {
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
   },
   {

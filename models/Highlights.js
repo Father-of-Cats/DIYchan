@@ -6,7 +6,6 @@ class Highlights extends Model {}
 
 Highlights.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -16,6 +15,10 @@ Highlights.init(
     sub_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'subchans',
+        key: 'id'
+      },
     },
   },
   {
