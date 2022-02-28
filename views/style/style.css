@@ -4,7 +4,12 @@
     --ter: #FB8604;
     --text: #091834;
 };
+.head-btn {
+    background: #FB8604;
+}
+
 main {
     background-color: var(--prime);
     color: var(--text);
+    /* margin: 70px black; */
 }
