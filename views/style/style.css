@@ -1,0 +1,10 @@
+:root {
+    --prime: #FFE8CC;
+    --sec: #1258DC;
+    --ter: #FB8604;
+    --text: #091834;
+};
+main {
+    background-color: var(--prime);
+    color: var(--text);
+}
