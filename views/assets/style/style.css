@@ -4,12 +4,17 @@
     --ter: #FB8604;
     --text: #091834;
 };
-.head-btn {
-    background: #FB8604;
+
+#des-box {
+    background-color: #091834;
 }
 
-main {
+#modal{
+    display: hidden;
+}
+
+body {
     background-color: var(--prime);
     color: var(--text);
-    /* margin: 70px black; */
+    margin: 70px black;
 }
