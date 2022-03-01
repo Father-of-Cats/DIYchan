@@ -30,7 +30,7 @@ Users.init(
     },
     datecreated: {
         type: DataTypes.DATE,
-        defaultValue: Sequelize.NOW,
+        defaultValue: sequelize.NOW,
     },    
   },
   {
