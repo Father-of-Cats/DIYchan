@@ -20,17 +20,13 @@ Users.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'usertypes',
+        model: 'Usertypes',
         key: 'id'
       },
     },
     Subs: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: 'Subchans',
-        key: 'owner_id'
-      },
     },
     username: {
       type: DataTypes.STRING,
