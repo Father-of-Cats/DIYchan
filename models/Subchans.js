@@ -20,7 +20,7 @@ Subchans.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'users',
+        model: 'Users',
         key: 'id'
       },
     },
@@ -30,7 +30,7 @@ Subchans.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'subchans',
+    modelName: 'Subchans',
   }
 );
 

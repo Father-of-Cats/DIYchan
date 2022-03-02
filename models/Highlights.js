@@ -16,7 +16,7 @@ Highlights.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'subchans',
+        model: 'Subchans',
         key: 'id'
       },
     },

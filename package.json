@@ -20,6 +20,9 @@
   "homepage": "https://github.com/Father-of-Cats/DIYchan#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
     "sequelize": "^6.16.3"
   }
 }

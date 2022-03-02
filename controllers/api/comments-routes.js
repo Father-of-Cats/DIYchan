@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Posts, Comments } = require('../../models/');
+const { Posts, Comments } = require('../../models');
 
 router.post('/', (req, res) => {
     // check the session
