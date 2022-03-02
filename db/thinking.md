@@ -21,4 +21,4 @@ Comments
 | id | user_id | sub_id |
 
 User Settings
-| id | theme_id |
+| id | theme_id | user_id |

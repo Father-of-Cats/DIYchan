@@ -15,10 +15,18 @@ Posts.init(
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'users',
+        key: 'id'
+      },
     },
     sub_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+          model: 'subchans',
+          key: 'id'
+        },
     },
     post_data: {
         type: DataTypes.TEXT,

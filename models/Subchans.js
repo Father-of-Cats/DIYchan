@@ -17,8 +17,12 @@ Subchans.init(
       allowNull: false,
     },
     owner_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'users',
+        key: 'id'
+      },
     },
   },
   {
