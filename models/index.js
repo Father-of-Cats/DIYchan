@@ -6,19 +6,15 @@ const Comments = require('./Comments');
 const Posts = require('./Posts');
 const Highlights = require('./Highlights');
 
-Users.hasMany(Usertypes);
+Users.belongsToMany(Usertypes, {
+  through: 'id',
+});
 
 Users.belongsToMany(Subchans, {
   through: 'id',
 });
 
-Users.belongsToMany(Posts, {
-  through: 'id',
-});
-
-Users.belongsToMany(Comments, {
-  through: 'id',
-});
+Users.hasMany(Comments);
 
 Posts.belongsToMany(Subchans, {
   through: 'sub_id',

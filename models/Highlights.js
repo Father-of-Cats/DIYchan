@@ -26,7 +26,7 @@ Highlights.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'highlights',
+    modelName: 'Highlights',
   }
 );
 

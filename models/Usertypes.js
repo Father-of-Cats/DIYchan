@@ -13,7 +13,7 @@ Usertypes.init(
       autoIncrement: true,
     },
     type: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
@@ -22,7 +22,7 @@ Usertypes.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'usertypes',
+    modelName: 'Usertypes',
   }
 );
 

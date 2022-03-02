@@ -30,7 +30,7 @@ Usersettings.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'usersettings',
+    modelName: 'Usersettings',
   }
 );
 
