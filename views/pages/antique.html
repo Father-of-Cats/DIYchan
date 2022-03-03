@@ -48,8 +48,10 @@
                             </div>
 
                             <!-- Post Title -->
-                            <label for="name" class="form-label">Post Title</label>
+
+                            <label for="name" class="form-label"></label>
                             <input type="text" class="form-control" id="name", placeholder="Post Title">
+
                             <!-- Post Text Entry  -->
                             <div class="form-floating">
                                 <textarea name="" id="post-text" class="form-control" style="height: 140px"></textarea>
@@ -69,8 +71,8 @@
     </setion>
 
 
-    <!-- Message Board 1 -->
-    <section class="container">
+    <!-- Post Board -->
+    <section class="container bg-secondary rounded pb-1">
         <div class="bg-secondary rounded m-2 p-2">
             <div class="row m-2 border border-4">
                 <div class="col">
@@ -83,37 +85,42 @@
                     <p id="timestamp" class="lead">03/01/2022</p>
                 </div>
             </div>
-                <div class="row">
-                    <div class="col-10-lg">
-                        <img src="../assets/img/postex.jpg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col">
-                        <p class="lead text-dark bg-light rounded m-2 p-2" id="post-text">Really happy with how this project turned out, the chest was filled with this gold and ever since we got rid of gold food turns to ash in our mouth and we are always thirsty. Oh well, didn't the restoration come out nice though?</p>
-                    </div>
-                </div>  
-            </div>
+            <div class="row">
+                <div class="col-10-lg">
+                    <img src="../assets/img/postex.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <p class="lead text-dark bg-light rounded m-2 p-2" id="post-text">Really happy with how this project turned out, the chest was filled with this gold and ever since we got rid of gold food turns to ash in our mouth and we are always thirsty. Oh well, didn't the restoration come out nice though?</p>
+                </div>
+            </div>  
         </div>
-    </section>
----------------------------------------------------------------------
-<!-- Comment Accordian -->
-<section id="comments">
-    <div class="container-md">
-        <div class="text-center">
-            <h2>Comments</h2>
-            <p class="lead text-muted">stuff and things and stuff again</p>
+        
+            <!-- Comment Accordian -->
+        <div class="text-center p-2">
+            <h2 class="display-5">Comment</h2>
+
+            <!-- Commit Text Entry  -->
+            <form action="" method="post">
+                <div class="form-floating">
+                    <textarea name="" id="comment-text" class="form-control" style="height: 140px"></textarea>
+                    <label for="post-text" >Your post content!!!</label>
+                </div>
+
+                <!--Post Submit Button-->
+                <div class="mb-4 text-center">
+                    <button type="submit" class="btn btn-warning mt-2 justify-content-start">Submit</button>
+                </div>
+            </form>
         </div>
-        <div class="row my-5 g-5 justify-content-around align-items-center">
-            <div class="col-6 col-lg-4">
-                <span id="username">Username</span>
-            </div>
+        <div class="row my-1 g-1 justify-content-around align-items-center">
             <div class="accordion" id="commentbox">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="commentheader">
-                        <button class="accordion-button" type="button" data-bs-target="collapse" data-bs-target="comment" aria-expanded="true" aria-controls="comment">Comment</button>
+                        <button class="accordion-button" type="button" data-bs-target="collapse" data-bs-target="comment" aria-expanded="true" aria-controls="comment">${username} ${timestamp}</button>
                     </h2>
-                    <div class="accordion-collapse collapse show" aria-labelledby="commentbox" data-bs-target="comment">
+                    <div class="accordion-collapse collapse" aria-labelledby="commentbox" data-bs-target="comment">
                         <div class="accordion-body">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, fuga.</p>
+                            <p>this looks super cool but that sounds like the curse of the black pearl, goodluck!!!!</p>
                         </div>
                     </div>
                 </div>
@@ -121,117 +128,17 @@
                     <h2 class="accordion-header" id="commentheader">
                         <button class="accordion-button" type="button" data-bs-target="collapse" data-bs-target="comment" aria-expanded="true" aria-controls="comment">Comment</button>
                     </h2>
-                    <div class="accordion-collapse collapse show" aria-labelledby="commentbox" data-bs-target="comment">
-                        <div class="accordion-body">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, fuga.</p>
-                        </div>
+                <div class="accordion-collapse collapse" aria-labelledby="commentbox" data-bs-target="comment">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, fuga.</p>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="commentheader">
-                            <button class="accordion-button" type="button" data-bs-target="collapse" data-bs-target="comment" aria-expanded="true" aria-controls="comment">Comment</button>
-                        </h2>
-                        <div class="accordion-collapse collapse" aria-labelledby="commentbox" data-bs-target="comment">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, fuga.</p>
-                            </div>
-                        </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Message Board 2 -->
-    <section class="container">
-        <div class="row">
-            <ol>
-                <li class="row">
-                    <a href="/item">
-                        <h4 class="title">
-                            Thread 1
-                        </h4>
-                        <div class="bottom">
-                            <p class="timestamp">
-                                10/03/2021
-                            </p>
-                            <p class="comment-count">
-                                4 comments
-                            </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="row">
-                    <a href="/item">
-                        <h4 class="title">
-                            Thread 2
-                        </h4>
-                        <div class="bottom">
-                            <p class="timestamp">
-                                10/03/2021
-                            </p>
-                            <p class="comment-count">
-                                4 comments
-                            </p>
-                        </div>
-                    </a>
-                </li>
-            </ol>
         </div>
     </section>
 
 
-   <!--Advertisment--> 
-    <div>Advertisment</div>
-
-
-            <!-- subchans container  -->
-
-
-<!-- <section id="reviews" class="bg-light">
-    <div class="container-lg">
-        <div class="text-center">
-            <h2>Subchans</h2>
-            <p class="lead">find a community that fits your interests!</p>
-        </div>       
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="list-group">
-                    <div class="list-group-item py-3">
-                        <h5 class="mb-1">A must buy for everyone everywhere</h5>
-                        <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, laudantium!</p>
-                        <small>by BUDDY</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-
-
-
-
-
-        <!-- Popular Pages Container  -->
-        <div>popular chans</div>
-    </div>
-    <!-- <div class="col">
-    <img class="img-fluid" src="./assets/img/dclogo-grey-v2.png" alt=""> -->
-
-    </div>
-    </div>
-        <!-- footer -->
-        <footer class="container">
-            <div class="row">
-                <div class="col">
-
-                </div>
-            </div>
-        </footer>
-
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>

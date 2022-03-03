@@ -24,46 +24,12 @@
           <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
         </form>
 
+<!-- Login & Sign-Up Buttons -->
         <div class="text-end">
-          <button type="button" class="btn btn-light m-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <button type="button" class="btn btn-light m-2" data-bs-toggle="modal" data-bs-target="#signin-modal">Login</button>
+          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signup-modal">Sign-up</button>
         </div>
       </div>
-
-<!--Remodel-->
-
-<!--Big Box
-<div class="container">
-    <div class="row">
-        <div class="col-lg-3 bg-secondary my-3">
-            <h3 class="text-center display-4 text-light p-3">Subchans</h3>
-            <p class="lead text-light text-center">Find a community that shares your interests!</p>
-            <div class="list-group list-group-md">
-                <ul class="list-unstyled">
-                    <li><a class="text-decoration-none list-group-item" href="../views/pages/antique.html">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="#">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="#">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="#">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="#">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="../views/pages/antique.html">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="#">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="#">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="#">Antique Restoration</a></li>
-                    <li><a class="text-decoration-none list-group-item" href="#">Antique Restoration</a></li>
-                </ul>
-            </div>
-        </div>
-    div
-        
-
-    
-    </div>
-</div>
- -->
-
-
-
-
 
 
       <!-- Website Description  -->
@@ -132,80 +98,80 @@
         </div>
 </section>
 
-<!-- <section id="reviews" class="bg-light">
-    <div class="container-lg">
-        <div class="text-center">
-            <h2>Subchans</h2>
-            <p class="lead">find a community that fits your interests!</p>
-        </div>       
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="list-group">
-                    <div class="list-group-item py-3">
-                        <h5 class="mb-1">A must buy for everyone everywhere</h5>
-                        <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, laudantium!</p>
-                        <small>by BUDDY</small>
+        <!-- Popular Pages Container  -->
+        <section class="container">
+                <div class="row">
+                    <div class="col align-items-center">
+                        <img class="img-fluid" src="./assets/img/dclogo-grey-v2.png" alt=""> -->
+                    </div>
+                    <div class="col-lg-5 bg-secondary rounded m-3">
+                        <h3 class="text-center display-4 text-light"> Popular Subchans</h3>
+                        <p class="lead text-light text-center">Find a community that shares your interests!</p>
+                        <div class="list-group list-group-lg">
+                            <ul class="list-unstyled text-center">
+                            <li><a class="text-decoration-none list-group-item" href="../views/pages/antique.html"> <img height=80px src="./assets/img/knitting.jpg" alt="" class=""> Knitting</a></li>
+                            <li><a class="text-decoration-none list-group-item" href="#"> <img height=80px src="./assets/img/woodworking.jpg" alt="" class=""> Woodworking</a></li>
+                            <li><a class="text-decoration-none list-group-item" href="#"> <img height=80px src="./assets/img/glassmaking.jpg" alt="" class=""> Glassmaking</a></li>
+
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 
-
-
-
-
-
-        <!-- Popular Pages Container  -->
-        <div>popular chans</div>
-        <div class="col-lg-4 justify-content-center my-3">
-            <img src="./assets/img/dclogo-grey-v2.png" alt="" class="img-fluid">
-        </div>
-    </div>
-    <!-- <div class="col">
-    <img class="img-fluid" src="./assets/img/dclogo-grey-v2.png" alt=""> -->
 
     </div>
-    </div>
+
+   
         <!-- footer -->
         <footer>Seriously</footer>
 
-<!--TEST-->
 
-<!-- <section id="intro">
-    <div class="container-lg">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-5 text-center text-md-start">
-                <h1>
-                    <div class="display-2">Black Belt</div>
-                    <div class="display-5 text-muted">Your Coding Skillz</div>
-                </h1>
-                <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ab facere numquam officia eos doloribus?</p>
-                <a href="#" class="btn btn-secondary btn-lg">Buy Now</a>
+<!-- Sign-Up Modal -->
+<div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Sign-Up and become one of us!!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="col-md-5 text-center d-none d-md-block">
-                <img class="img-fluid" src="./assets/img/dclogo-grey-v2.png" alt="">
+            <div class="modal-body">
+                <label for="modal-email" class="form-label">Your Email Address</label>
+                <input type="text" class="form-control" id="modal-email" placeholder="e.g. bobo@gmail.com">
+                <label for="modal-username" class="form-label">Desired Username</label>
+                <input type="text" class="form-control" id="modal-username" placeholder="e.g. stanklord420">
+                <label for="modal-pw" class="form-label">Password</label>
+                <input type="text" class="form-control" id="modal-pw" placeholder="">
+            </div>
+            <div class="modal-footer">
+                <p>already have a username? <a href="#signin-modal">click here</a></p>
+                <button class="btn btn-warning">Sign-up</button>
             </div>
         </div>
     </div>
-</section> -->
+</div>
 
+<!-- Sign-in Modal -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Sign-in</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="modal-username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="login-username" placeholder="e.g. stanklord420">
+                <label for="modal-pw" class="form-label">Password</label>
+                <input type="text" class="form-control" id="login-pw" placeholder="">
+            </div>
+            <div class="modal-footer">
+                <p>don't have an account? <a href="#signup-modal">click here</a></p>
+                <button class="btn btn-warning">Sign-in</button>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
