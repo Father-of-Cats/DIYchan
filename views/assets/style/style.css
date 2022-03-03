@@ -1,0 +1,20 @@
+:root {
+    --prime: #FFE8CC;
+    --sec: #1258DC;
+    --ter: #FB8604;
+    --text: #091834;
+};
+
+#des-box {
+    background-color: #091834;
+}
+
+#modal{
+    display: hidden;
+}
+
+body {
+    background-color: var(--prime);
+    color: var(--text);
+    margin: 70px black;
+}
