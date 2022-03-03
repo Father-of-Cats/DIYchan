@@ -10,9 +10,9 @@ Users.belongsToMany(Usertypes, {
   through: 'id',
 });
 
-Users.belongsToMany(Subchans, {
-  through: 'id',
-});
+// Users.belongsToMany(Subchans, {
+//   through: 'id',
+// });
 
 Users.hasMany(Comments);
 
@@ -23,7 +23,7 @@ Posts.belongsToMany(Subchans, {
 Posts.belongsTo(Users);
 
 Comments.belongsToMany(Posts, {
-  through: 'id',
+  through: 'post_id',
 });
 
 Comments.belongsTo(Users);
