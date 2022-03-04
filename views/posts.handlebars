@@ -1,0 +1,108 @@
+<!--Post Forms-->
+    <setion id="postform">
+        <div class="container-lg">
+            <div class="text-center m-4">
+                <h2 class="display-4">Post your DIYproject!</h2>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-6">
+                    <form action="" method="post">
+                        <div class="bg-secondary p-3 rounded">
+                            <!--UserName Entry-->
+                            <label for="email" class="form-label">Posting as:</label>
+                            <div class="mb-4 input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                            <input type="email" class="form-control" id="email" method placeholder="Start your post">
+                            </div>
+
+                            <!-- Post Title -->
+
+                            <label for="name" class="form-label"></label>
+                            <input type="text" class="form-control" id="name", placeholder="Post Title">
+
+                            <!-- Post Text Entry  -->
+                            <div class="form-floating">
+                                <textarea name="" id="post-text" class="form-control" style="height: 140px"></textarea>
+                                <label for="post-text" >Your post content!!!</label>
+                            </div>
+                            <!--Image Uploader-->
+                            <input type="file" name="file">
+                            <!--Post Submit Button-->
+                            <div class="mb-4 text-center">
+                                <button type="submit" class="btn btn-warning mt-2 justify-content-start">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </setion>
+
+
+    <!-- Post Board -->
+    <section class="container bg-secondary rounded pb-1">
+        <div class="bg-secondary rounded m-2 p-2">
+            <div class="row m-2 border border-4">
+                <div class="col">
+                    <div id="posttitle" class="display-4 text-light m-2 text-center">
+                        Chest I found buried on the beach, restored by hand.       
+                    </div>
+                </div>
+                <div class="col-lg-2 text-start">
+                    <p id="username" class="lead">Username</p>
+                    <p id="timestamp" class="lead">03/01/2022</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10-lg">
+                    <img src="../assets/img/postex.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <p class="lead text-dark bg-light rounded m-2 p-2" id="post-text">Really happy with how this project turned out, the chest was filled with this gold and ever since we got rid of gold food turns to ash in our mouth and we are always thirsty. Oh well, didn't the restoration come out nice though?</p>
+                </div>
+            </div>  
+        </div>
+        
+            <!-- Comment Accordian -->
+        <div class="text-center p-2">
+            <h2 class="display-5">Comment</h2>
+
+            <!-- Commit Text Entry  -->
+            <form action="" method="post">
+                <div class="form-floating">
+                    <textarea name="" id="comment-text" class="form-control" style="height: 140px"></textarea>
+                    <label for="post-text" >Your post content!!!</label>
+                </div>
+
+                <!--Post Submit Button-->
+                <div class="mb-4 text-center">
+                    <button type="submit" class="btn btn-warning mt-2 justify-content-start">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="row my-1 g-1 justify-content-around align-items-center">
+            <div class="accordion" id="commentbox">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="commentheader">
+                        <button class="accordion-button" type="button" data-bs-target="collapse" data-bs-target="comment" aria-expanded="true" aria-controls="comment">${username} ${timestamp}</button>
+                    </h2>
+                    <div class="accordion-collapse collapse" aria-labelledby="commentbox" data-bs-target="comment">
+                        <div class="accordion-body">
+                            <p>this looks super cool but that sounds like the curse of the black pearl, goodluck!!!!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="commentheader">
+                        <button class="accordion-button" type="button" data-bs-target="collapse" data-bs-target="comment" aria-expanded="true" aria-controls="comment">Comment</button>
+                    </h2>
+                <div class="accordion-collapse collapse" aria-labelledby="commentbox" data-bs-target="comment">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, fuga.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
