@@ -16,18 +16,6 @@ Users.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    type: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'Usertypes',
-        key: 'id'
-      },
-    },
-    Subs: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,

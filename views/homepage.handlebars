@@ -1,0 +1,27 @@
+
+    <div class="row justify-content-center flex align-items-center rounded bg-secondary">
+        <div class="row align-items-center p-1">
+            <h3 class="text-center display-4 text-light">Subchans</h3>
+            <p class="lead text-light text-center">Find a community that shares your interests!</p>
+        </div>
+          
+
+        <main>
+            <aside>
+            <h2>Enjoy the DIY Image Board</h2>
+            </aside>
+            <div class="gallery">
+            </div>
+        </main>
+
+        
+        <!-- List Col 1 -->
+        <div class="col">
+            <div class="list-group list-group-lg">
+                <ul class="list-unstyled">
+                    {{#each sub_name}}
+                    <li><a class="text-decoration-none list-group-item" href="/subchans/{{id}}">{{name}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>

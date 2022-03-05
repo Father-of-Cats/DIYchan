@@ -12,24 +12,20 @@ Posts.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'Users',
-        key: 'id'
-      },
-    },
-    sub_id: {
-        type: DataTypes.INTEGER,
+    post_subject: {
+        type: DataTypes.STRING,
         allowNull: false,
-        references: {
-          model: 'Subchans',
-          key: 'id'
-        },
     },
     post_data: {
         type: DataTypes.TEXT,
+        allowNull: false,
+    },
+    user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    subchan_id: {
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
   },

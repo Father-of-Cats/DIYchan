@@ -12,22 +12,6 @@ Comments.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'Users',
-        key: 'id'
-      },
-    },
-    post_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'Subchans',
-        key: 'id'
-      },
-    },
     comment_data: {
       type: DataTypes.TEXT,
       allowNull: false,

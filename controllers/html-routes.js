@@ -1,38 +1,63 @@
 const router = require("express").Router();
-const { Subchans, Users } = require("../models");
+const { Subchans, Users, Posts, Comments } = require("../models");
 
-// get all subs for homepage
+// get all subchans for homepage
 router.get("/", (req, res) => {
-    res.render("homepage");
-    // Subchans.findAll({
-    //     include: [Users],
-    // })
-    //     .then((dbPostData) => {
-    //         const subs = dbPostData.map((id) => id.get({ plain: true }));
+    Subchans.findAll()
+        .then((dbPostData) => {
+            const sub_name = dbPostData.map((Subchans) => Subchans.get({ plain: true }));
 
-    //         res.render("login", { subs });
-    //     })
-    //     .catch((err) => {
-    //         res.status(500).json(err);
-    //     });
+            res.render("homepage", { sub_name });
+        })
+        .catch((err) => {
+            res.status(500).json(err);
+        });
 });
 
-router.get("/login", (req, res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect("/");
-    //     return;
-    // }
+// get subchans
+router.get("/subchans", (req, res) => {
+    Subchans.findAll({
+        include: [Posts],
+    })
+        .then((dbPostData) => {
+            const sub_name = dbPostData.map((Subchans) => Subchans.get({ plain: true }));
 
-    res.render("login");
+            res.render("homepage", { sub_name });
+        })
+        .catch((err) => {
+            res.status(500).json(err);
+        });
 });
 
-router.get("/posts", (req, res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect("/");
-    //     return;
-    // }
+// get subchan by id
+router.get("/subchans/:id", (req, res) => {
+    Subchans.findByPk(req.params.id, {
+        include: [Posts],
+    })
+        .then((dbPostData) => {
+            const subs = dbPostData.get({ plain: true });
 
-    res.render("posts");
+            res.render("subchans", { subs });
+        })
+        .catch((err) => {
+            res.status(404).json(err);
+        });
+});
+
+// get post by id
+router.get("/posts/:id", (req, res) => {
+    Posts.findByPk(req.params.id, {
+        include: [Users],
+        include: [Comments],
+    })
+        .then((dbPostData) => {
+            const posts = dbPostData.get({ plain: true });
+
+            res.render("posts", { posts });
+        })
+        .catch((err) => {
+            res.status(404).json(err);
+        });
 });
 
 module.exports = router;
