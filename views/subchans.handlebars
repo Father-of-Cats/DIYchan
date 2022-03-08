@@ -1,0 +1,14 @@
+        <!-- List Col 1 -->
+        <div class="col">
+            <div class="list-group list-group-lg">
+                <ul class="list-unstyled">
+                    {{#each subs}}
+                    <li><a class="text-decoration-none list-group-item" href="/posts/{{Post.id}}">{{post_subject}}</a></li>
+                    {{Posts.post_subject}}
+                    {{/each}}
+                    {{#each Posts}}
+                    <li><a class="text-decoration-none list-group-item" href="/posts/{{Posts.id}}">{{post_subject}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>

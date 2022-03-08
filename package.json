@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/Father-of-Cats/DIYchan/issues"
   },
-  "homepage": "https://github.com/Father-of-Cats/DIYchan#readme"
+  "homepage": "https://github.com/Father-of-Cats/DIYchan#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "mysql2": "^2.3.3",
+    "save": "^2.4.0",
+    "sequelize": "^6.16.3"
+  }
 }
